@@ -1,10 +1,18 @@
 import "../Home/Home.css";
 import Navbar from "../Components/Navbar";
+import Planning from "../Components/Planning";
+import Search from "../Components/Search";
 
 function Home() {
-    return(
+    return (
         <div>
-            <Navbar/>
+            <Navbar />
+            <div className="container-izquierdo">
+                <Planning />
+            </div>
+            <div className="container-derecho">
+                <Search />
+            </div>
         </div>
     );
 }

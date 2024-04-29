@@ -1,0 +1,16 @@
+.container-search {
+    background-color: rgba(0, 74, 173, 0.5); /* Color de fondo con opacidad del 50% */
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 20px auto; 
+}
+
+@media (min-width: 768px) {
+    .container-search {
+        margin: 20px auto; 
+        max-width: 80%; 
+    }
+}

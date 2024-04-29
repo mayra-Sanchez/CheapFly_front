@@ -1,0 +1,32 @@
+.container-izquierdo {
+    width: 457px;
+    float: left;
+}
+
+.container-derecho {
+    width: calc(100% - 457px);
+    min-width: 813px; 
+    float: right;
+}
+
+@media (max-width: 1270px) {
+    .container-izquierdo {
+        width: 50%;
+        float: none;
+    }
+
+    .container-derecho {
+        width: 50%;
+        min-width: 0;
+        float: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-izquierdo,
+    .container-derecho {
+        width: 100%;
+        float: none;
+        min-width: 0;
+    }
+}

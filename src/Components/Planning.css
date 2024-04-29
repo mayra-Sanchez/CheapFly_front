@@ -1,0 +1,17 @@
+.container-planning {
+    background-color: #004AAD;
+    width: 100%;
+    max-width: 457px;
+    height: auto;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 20px auto; 
+}
+
+@media (min-width: 768px) {
+    .container-planning {
+        margin: 20px auto; 
+        max-width: 80%; 
+    }
+}
