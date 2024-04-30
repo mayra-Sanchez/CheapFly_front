@@ -1,12 +1,12 @@
 .container-planning {
     background-color: #004AAD;
-    width: 100%;
-    max-width: 457px;
-    height: auto;
-    border-radius: 20px;
-    box-sizing: border-box;
+    color: white;
     padding: 20px;
-    margin: 20px auto; 
+    border-radius: 20px;
+    font-family: 'itim', sans-serif;
+    max-width: 600px; 
+    margin: 0 auto; 
+    overflow-y: auto; 
 }
 
 @media (min-width: 768px) {
@@ -14,4 +14,138 @@
         margin: 20px auto; 
         max-width: 80%; 
     }
+}
+
+.centered-content {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.buttons {
+    margin-bottom: 20px;
+}
+
+.buttons button {
+    margin-right: 10px;
+    background-color: #7B7899;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.buttons button.selected {
+    background-color: rgba(170, 173, 0, 0.5);
+}
+
+.buttons button:hover {
+    background-color: #5A5775;
+}
+
+
+.inputs div {
+    margin-bottom: 10px;
+}
+
+.inputs label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.inputs input {
+    width: calc(100% - 40px);  
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; 
+}
+
+
+.dates div {
+    margin-bottom: 10px;
+}
+
+.dates label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.dates input {
+    width: calc(50% - 20px); 
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; 
+}
+
+.inputs div,
+.dates div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.inputs label,
+.dates label {
+    flex: 0 0 120px; 
+    font-size: 20px;
+    margin-right: 10px; 
+}
+
+.inputs input,
+.dates input {
+    flex: 1; 
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; 
+}
+
+.people {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.people label {
+    flex: 0 0 50px;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.people input {
+    width: 70px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.search-container {
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+
+.search-button {
+    margin-top: 10px; 
+    background-color: #7B7899;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.search-button:hover {
+    background-color: #e65c5c; 
 }
