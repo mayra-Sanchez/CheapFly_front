@@ -1,0 +1,12 @@
+/* CardFly.css */
+.CardFly {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;  
+}
+
+.CardFly .p-card {
+    margin: 5px; /* espacio entre los cards */
+    background-color: #ffffff !important;
+    border-radius: 20px;
+}
