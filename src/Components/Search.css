@@ -1,16 +1,15 @@
+/* Search.css */
 .container-search {
     background-color: rgba(0, 74, 173, 0.5); 
     width: 100%;
     height: auto;
     padding: 20px;
     border-radius: 20px;
-    max-width: 600px; 
     margin: 0 auto; 
     overflow-y: auto; 
 }
 
 .container-search::-webkit-scrollbar {
-   
     width: 10px;
 }
 
@@ -26,8 +25,34 @@
 
 @media (min-width: 768px) {
     .container-search {
-        margin: 20px auto; 
         max-width: 80%; 
-    }
+        margin: 20px auto; }
 }
 
+.titulito {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.p-paginator {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.p-paginator .p-paginator-pages {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.p-paginator .p-paginator-page {
+    color: #555; /* Color de los números de página */
+    cursor: pointer;
+}
+
+.p-paginator .p-paginator-page.p-highlight {
+    color: black; /* Color de la página actual */
+    font-weight: bold;
+}

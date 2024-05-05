@@ -2,11 +2,76 @@
 .CardFly {
     display: flex;
     flex-wrap: wrap;
-    margin: -5px;  
+    justify-content: space-between;
 }
 
 .CardFly .p-card {
-    margin: 5px; /* espacio entre los cards */
     background-color: #ffffff !important;
     border-radius: 20px;
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+
+.CardFly .p-card .p-card-title,
+.CardFly .p-card .p-card-content,
+.CardFly .p-card .p-card-footer {
+    padding: 10px;
+}
+
+.CardFly .p-card .p-card-title {
+    font-weight: bold;
+    text-align: center;
+}
+
+.CardFly .p-card .p-card-content {
+    border-top: 1px solid #30348C;
+}
+
+.CardFly .p-card .card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.CardFly .p-card .p-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.buttons .buttonCard {
+    background-color: #004AAD;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.buttons .buttonCard.selected {
+    background-color: rgba(170, 173, 0, 0.5);
+}
+
+.buttons .buttonCard:hover {
+    background-color: #5A5775;
+}
+
+.buttons .buttonClose {
+    background-color: #fa0000;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    
+}
+
+.buttons .buttonClose.selected {
+    background-color: rgba(173, 35, 0, 0.5);
+}
+
+.buttons .buttonClose:hover {
+    background-color: #c55858;
 }
