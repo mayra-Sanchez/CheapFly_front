@@ -13,6 +13,7 @@ function Planning({ onVuelosChange }) {
     const handleTipoViajeChange = (tipo) => {
         setTipoViaje(tipo);
     };
+    
     const handleBuscarVuelo = async () => {
         try {
             
@@ -26,7 +27,6 @@ function Planning({ onVuelosChange }) {
             
         } catch (error) {
             console.error('Error al buscar vuelos:', error);
-            console.log(city_of_origin, destination_city, departure_date, return_date, adults);
         }
     };
 
