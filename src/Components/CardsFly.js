@@ -6,6 +6,9 @@ import { Dialog } from 'primereact/dialog';
 import { Link } from 'react-router-dom';
 
 function CardFly({ vuelo }) {
+
+    console.log(vuelo.offer_link);
+
     const [displayDialog, setDisplayDialog] = useState(false);
 
     const showDialog = () => {
@@ -45,9 +48,9 @@ function CardFly({ vuelo }) {
                     {vuelo.return_trip_scales && <p><strong>Aeropuerto de llegada:</strong> {vuelo.return_trip_scales}</p>}
                 </div>
                 <div className='link_oferta' style={{ marginTop: '20px', display: 'flex', justifyContent: 'center' }}>
-                    <Link to={vuelo.offer_link}>
+                    <a href={`http://${vuelo.offer_link}`} target="_blank" rel="noopener noreferrer">
                         <strong>Ver oferta de vuelo</strong>
-                    </Link>
+                    </a>
                 </div>
                 <div className="buttons" style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
                     <Button className="buttonClose" label="Cerrar" onClick={hideDialog} />
