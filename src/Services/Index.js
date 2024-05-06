@@ -27,6 +27,30 @@ const endpoints = {
             console.error('Error fetching flights:', error);
             throw error;
         }
+    },
+
+    getVuelosSoloIda: async (city_of_origin, destination_city, departure_date, adults) => {
+        try {
+            const config = {
+                headers: {
+                    accept: "*/*",
+                    "Content-Type": "application/json",
+                },
+            };
+            const response = await axios.get(URL_VUELOS, {
+                params: {
+                    city_of_origin,
+                    destination_city,
+                    departure_date,
+                    adults
+                },
+                ...config
+            });
+            return response.data;
+        } catch (error) {
+            console.error('Error fetching flights:', error);
+            throw error;
+        }
     }
 };
 

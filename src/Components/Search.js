@@ -4,8 +4,9 @@ import "./Search.css";
 import Lottie from 'react-lottie';
 import animationData from '../Resources/airplaneLoading.json';
 import { Paginator } from 'primereact/paginator';
+import CardFlySoloIda from './CardFlySoloIDa';
 
-function Search({ vuelos }) {
+function Search({ vuelos, tipoVuelo }) {
     const [first, setFirst] = useState(0);
     const rows = 3;
 
@@ -36,8 +37,10 @@ function Search({ vuelos }) {
                     </div>
 
                     {vuelos.slice(first, first + rows).map((vuelo, index) => (
-                        <CardsFly key={index} vuelo={vuelo} />
+                        tipoVuelo === "idaVuelta" ? <CardsFly key={index} vuelo={vuelo} /> : <CardFlySoloIda key={index} vuelo={vuelo} />
                     ))}
+
+
                     <Paginator first={first} rows={rows} totalRecords={vuelos.length} onPageChange={onPageChange} />
                 </>
             )}

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Planning.css";
 import { endpoints } from "../Services/Index";
 
-function Planning({ onVuelosChange }) {
+function Planning({ onVuelosChange, onTipoViajeChange })  {
     const [tipoViaje, setTipoViaje] = useState("idaVuelta");
     const [city_of_origin, setCityOfOrigin] = useState("");
     const [destination_city, setDestinationCity] = useState("");
@@ -12,23 +12,28 @@ function Planning({ onVuelosChange }) {
 
     const handleTipoViajeChange = (tipo) => {
         setTipoViaje(tipo);
+        onTipoViajeChange(tipo);
     };
-    
+
     const handleBuscarVuelo = async () => {
         try {
-            
             const formattedDepartureDate = departure_date.split('-').reverse().join('-');
-            const formattedReturnDate = return_date.split('-').reverse().join('-');
-            
-            const vuelos = await endpoints.getVuelos(city_of_origin, destination_city, formattedDepartureDate, formattedReturnDate, adults);
+            let vuelos;
+            if (tipoViaje === "idaVuelta") {
+                const formattedReturnDate = return_date.split('-').reverse().join('-');
+                vuelos = await endpoints.getVuelos(city_of_origin, destination_city, formattedDepartureDate, formattedReturnDate, adults);
+            } else if (tipoViaje === "soloIda") {
+                vuelos = await endpoints.getVuelosSoloIda(city_of_origin, destination_city, formattedDepartureDate, adults);
+            }
             console.log("Vuelos encontrados:", vuelos);
 
             onVuelosChange(vuelos);
-            
+
         } catch (error) {
             console.error('Error al buscar vuelos:', error);
         }
     };
+
 
     return (
         <div className="container-planning">
